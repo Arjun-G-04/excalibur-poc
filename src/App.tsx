@@ -1,7 +1,6 @@
 import { Engine, PointerScope, Loader, Actor, Color, Vector } from 'excalibur'
 import { useEffect } from 'react'
 import { TiledMapResource } from '@excaliburjs/plugin-tiled'
-import map from "./assets/map.tmx"
 
 function App() {
   useEffect(() => {
@@ -59,7 +58,7 @@ function App() {
       }
     })
 
-    const tiledMapResource = new TiledMapResource(map)
+    const tiledMapResource = new TiledMapResource("/src/assets/map.tmx")
     // console.log(tiledMapResource)
     const loader = new Loader([tiledMapResource]);
     game.start(loader).then(() => {
