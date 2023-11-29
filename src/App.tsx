@@ -58,7 +58,7 @@ function App() {
       }
     })
 
-    const tiledMapResource = new TiledMapResource("/src/assets/map.tmx")
+    const tiledMapResource = new TiledMapResource("/map.tmx")
     // console.log(tiledMapResource)
     const loader = new Loader([tiledMapResource]);
     game.start(loader).then(() => {
